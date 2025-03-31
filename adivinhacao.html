@@ -24,6 +24,10 @@
     <div class="container">
       <aside>
         <img src="frontend/images/0 erro.png" alt="forca" class="imagem" />
+        <div class="erros">
+          <h2>Erros:</h2>
+          <div id="listaErros"></div>
+        </div>
       </aside>
       <main>
         <div class="teclado">
@@ -61,18 +65,16 @@
           </div>
         </div>
         <div class="palavra"></div>
-        <div class="acerto"></div>
-        <div class="erros">
-          <h2>Erros:</h2>
-          <div id="listaErros"></div>
-        </div>
       </main>
     </div>
-    <div class="botoes">
-      <button class="btnVoltar">Voltar</button>
-      <button class="btnRecomecar">Recomeçar</button>
+    <div class="card">
+      <div class="acerto">
+        <div class="botoes">
+          <button class="btnRecomecar">Recomeçar</button>
+          <button class="btnVoltar">Escolher Tema</button>
+        </div>
+      </div>
     </div>
-
     <script src="script.js"></script>
   </body>
 </html>

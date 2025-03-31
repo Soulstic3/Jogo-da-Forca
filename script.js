@@ -22,7 +22,6 @@ const temas = {
     "PATO",
   ],
   frutas: [
-    "MAÇA",
     "BANANA",
     "LARANJA",
     "MORANGO",
@@ -124,6 +123,9 @@ if (window.location.pathname.includes("adivinhacao.html")) {
       temaEscolhido.charAt(0).toUpperCase() + temaEscolhido.slice(1)
     }`;
 
+    // Esconder botao
+    document.querySelector(".btnRecomecar").style.display = "none";
+
     //Criar campo de advinhação
     const palavraDiv = document.querySelector(".palavra");
     palavraDiv.innerHTML = "";
@@ -157,8 +159,12 @@ if (window.location.pathname.includes("adivinhacao.html")) {
             }
           }
           if (verificarPalavraCompleta()) {
-            acertoTexto.textContent = "Parabéns você acertou!";
+            acertoTexto.textContent =
+              `Parabéns você acertou! A palavra era: ` + palavraEscolhida;
             acerto.appendChild(acertoTexto);
+            document.querySelector(".btnRecomecar").style.display = "inline";
+            document.querySelector(".btnVoltar").style.display = "inline";
+            document.querySelector(".card").style.display = "flex";
           }
         } else {
           erros++;
@@ -171,8 +177,11 @@ if (window.location.pathname.includes("adivinhacao.html")) {
         // Verifica quantidade de erros
         if (erros >= maxErros) {
           acertoTexto.textContent =
-            "Você errou! a palavra era: " + palavraEscolhida;
+            "Que pena você errou! a palavra era: " + palavraEscolhida;
           acerto.appendChild(acertoTexto);
+          document.querySelector(".btnRecomecar").style.display = "inline";
+          document.querySelector(".btnVoltar").style.display = "inline";
+          document.querySelector(".card").style.display = "flex";
         }
       });
     });

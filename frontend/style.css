@@ -8,14 +8,21 @@
 
 body {
   background: #3d3850;
-  height: 100%;
+  position: relative;
+  z-index: 1;
 }
 
 header {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 8svh;
+  margin: 8svh 2svw;
+}
+
+header button {
+  position: absolute;
+  left: 1svw;
 }
 
 .main-container {
@@ -49,23 +56,29 @@ header {
 
 .container {
   display: flex;
+  flex-wrap: wrap;
 }
 
 aside {
-  max-width: 50dvw;
-  margin-left: 10dvw;
+  display: flex;
+  flex-direction: column;
+  max-width: 50svw;
+  max-height: 80svh;
+  margin-left: 5svw;
   overflow: hidden;
 }
 
 aside img {
   width: 100%;
+  max-height: 300px;
+  overflow: hidden;
   object-fit: fill;
 }
 
 main {
   display: flex;
-  flex-direction: column;
-  width: 100%;
+  flex-direction: column-reverse;
+  flex-grow: 1;
   gap: 3svh;
 }
 
@@ -74,7 +87,7 @@ main {
   flex-direction: column;
   align-items: center;
   gap: 10px;
-  margin-top: 15svh;
+  margin-top: 5svh;
 }
 
 .teclado_letra {
@@ -84,6 +97,19 @@ main {
   font-size: 20px;
   padding: 10px;
   cursor: pointer;
+}
+
+.acerto {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: space-evenly;
+  color: inherit;
+  margin: 2svw;
+}
+
+.acerto p {
+  color: inherit;
 }
 
 .erros {
@@ -101,32 +127,66 @@ main {
   font-size: x-large;
 }
 
-.botoes {
-  position: absolute;
-  bottom: 2svh;
-  display: flex;
-  align-items: center;
-  width: 100%;
-  justify-content: space-between;
-  padding: 0 10svw;
-}
 .btnVoltar {
+  display: none;
   background: transparent;
-  border: #fff solid 2px;
+  border: black solid 2px;
   border-radius: 12px;
   padding: 10px;
   font-size: larger;
+  color: black;
 }
 .btnRecomecar {
+  display: none;
   background: transparent;
-  border: #fff solid 2px;
+  border: black solid 2px;
   border-radius: 12px;
   padding: 10px;
   font-size: larger;
+  color: black;
 }
 
 .btnVoltar:hover,
 .btnRecomecar:hover {
-  background: #2d2a3b;
+  background: #7c7c7c;
   cursor: pointer;
+}
+
+.card {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  background-color: #fff;
+  height: 300px;
+  border-radius: 20px;
+  color: black;
+}
+
+@media all and (max-width: 480px) {
+  header h1 {
+    font-size: x-large;
+  }
+
+  aside {
+    flex-direction: row;
+    height: 40svh;
+    max-width: 400svw;
+    width: 70%;
+  }
+
+  .teclado {
+    margin-top: 15svh;
+  }
+
+  .teclado_letra {
+    font-size: small;
+  }
+
+  .card {
+    width: 80svw;
+    justify-content: center;
+  }
 }
