@@ -114,7 +114,7 @@ function escolherPalavraAleatoria(tema) {
 // Ao entrar na pagina adivinhacao.html chama a função para escolher palavra
 if (window.location.pathname.includes("adivinhacao.html")) {
   window.onload = function () {
-    const urlParams = new URLSearchParams(window.location.search);
+    const urlParams = new URLSearchParams(window.location.search); // Pega o parametro na url enviado pelo index.hmtl
     const temaEscolhido = urlParams.get("tema");
     palavraEscolhida = escolherPalavraAleatoria(temaEscolhido);
 
@@ -123,16 +123,13 @@ if (window.location.pathname.includes("adivinhacao.html")) {
       temaEscolhido.charAt(0).toUpperCase() + temaEscolhido.slice(1)
     }`;
 
-    // Esconder botao
-    document.querySelector(".btnRecomecar").style.display = "none";
-
     //Criar campo de advinhação
     const palavraDiv = document.querySelector(".palavra");
     palavraDiv.innerHTML = "";
     for (let letra of palavraEscolhida) {
       const letraElement = document.createElement("p");
-      letraElement.textContent = "\u00A0";
-      letraElement.className = "letra"; // Adicona um espaço vazio para renderizar a tag p
+      letraElement.textContent = "\u00A0"; // Adicona um espaço vazio para renderizar a tag p
+      letraElement.className = "letra";
       palavraDiv.appendChild(letraElement);
     }
 
@@ -147,7 +144,6 @@ if (window.location.pathname.includes("adivinhacao.html")) {
           alert("Você já tentou essa letra!");
           return;
         }
-
         letrasTentadas.push(letraTentada);
 
         // Validar tentativa
