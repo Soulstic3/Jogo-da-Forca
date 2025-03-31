@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jogo da Forca</title>
+    <link
+      rel="shortcut icon"
+      href="frontend/images/jogo-da-forca.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="frontend/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <h1 id="tema">Tema:</h1>
+    </header>
+    <div class="container">
+      <aside>
+        <img src="frontend/images/0 erro.png" alt="forca" class="imagem" />
+      </aside>
+      <main>
+        <div class="teclado">
+          <div class="row">
+            <button class="teclado_letra">Q</button>
+            <button class="teclado_letra">W</button>
+            <button class="teclado_letra">E</button>
+            <button class="teclado_letra">R</button>
+            <button class="teclado_letra">T</button>
+            <button class="teclado_letra">Y</button>
+            <button class="teclado_letra">U</button>
+            <button class="teclado_letra">I</button>
+            <button class="teclado_letra">O</button>
+            <button class="teclado_letra">P</button>
+          </div>
+          <div class="row">
+            <button class="teclado_letra">A</button>
+            <button class="teclado_letra">S</button>
+            <button class="teclado_letra">D</button>
+            <button class="teclado_letra">F</button>
+            <button class="teclado_letra">G</button>
+            <button class="teclado_letra">H</button>
+            <button class="teclado_letra">J</button>
+            <button class="teclado_letra">K</button>
+            <button class="teclado_letra">L</button>
+          </div>
+          <div class="row">
+            <button class="teclado_letra">Z</button>
+            <button class="teclado_letra">X</button>
+            <button class="teclado_letra">C</button>
+            <button class="teclado_letra">V</button>
+            <button class="teclado_letra">B</button>
+            <button class="teclado_letra">N</button>
+            <button class="teclado_letra">M</button>
+          </div>
+        </div>
+        <div class="palavra"></div>
+        <div class="acerto"></div>
+        <div class="erros">
+          <h2>Erros:</h2>
+          <div id="listaErros"></div>
+        </div>
+      </main>
+    </div>
+    <div class="botoes">
+      <button class="btnVoltar">Voltar</button>
+      <button class="btnRecomecar">Recomeçar</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

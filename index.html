@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="shortcut icon"
+      href="frontend/images/jogo-da-forca.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="frontend/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>Jogo da forca</h1>
+    </header>
+    <div class="main-container">
+      <h2>Escolha um tema:</h2>
+      <div class="main-container_botoes">
+        <button onclick="irParaAdivinhacao('animais')">Animais</button>
+        <button onclick="irParaAdivinhacao('frutas')">Frutas</button>
+        <button onclick="irParaAdivinhacao('objetos')">Objetos</button>
+        <button onclick="irParaAdivinhacao('adjetivos')">Adjetivos</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

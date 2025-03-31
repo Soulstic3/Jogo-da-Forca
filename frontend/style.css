@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Anonymous Pro", sans-serif;
+  color: #fff;
+  box-sizing: border-box;
+}
+
+body {
+  background: #3d3850;
+  height: 100%;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 8svh;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 70svh;
+}
+
+.main-container_botoes {
+  margin-top: 5svh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.main-container_botoes button {
+  background: transparent;
+  border: #fff solid 2px;
+  border-radius: 12px;
+  padding: 10px;
+  font-size: larger;
+}
+
+.main-container_botoes button:hover {
+  background: #2d2a3b;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.container {
+  display: flex;
+}
+
+aside {
+  max-width: 50dvw;
+  margin-left: 10dvw;
+  overflow: hidden;
+}
+
+aside img {
+  width: 100%;
+  object-fit: fill;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 3svh;
+}
+
+.teclado {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 15svh;
+}
+
+.teclado_letra {
+  background: transparent;
+  border-radius: 12px;
+  border: white solid 2px;
+  font-size: 20px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.erros {
+  margin-top: 5svh;
+}
+
+.palavra {
+  display: flex;
+  align-self: center;
+  gap: 10px;
+}
+
+.palavra p {
+  border-bottom: 2px solid #fff;
+  font-size: x-large;
+}
+
+.botoes {
+  position: absolute;
+  bottom: 2svh;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  padding: 0 10svw;
+}
+.btnVoltar {
+  background: transparent;
+  border: #fff solid 2px;
+  border-radius: 12px;
+  padding: 10px;
+  font-size: larger;
+}
+.btnRecomecar {
+  background: transparent;
+  border: #fff solid 2px;
+  border-radius: 12px;
+  padding: 10px;
+  font-size: larger;
+}
+
+.btnVoltar:hover,
+.btnRecomecar:hover {
+  background: #2d2a3b;
+  cursor: pointer;
+}
